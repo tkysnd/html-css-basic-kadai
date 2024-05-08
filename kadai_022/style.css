@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    font-size: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+header>h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* main部分 */
+main {
+    margin: 10px;
+}
+.contents {
+    border-style: solid;
+    border-color: rgb(236, 122, 122);
+    border-width: 3px;
+    flex-basis: 25%;
+    margin: 10px 15px 10px 15px;
+    text-align: center;
+}
+.contents>p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+/* footer部分 */
+footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+footer>a {
+    color: rgb(255, 255, 255);
+}
+footer>a:visited {
+    color: rgb(193, 243, 251);
+}
+footer>a:hover {
+    color: rgb(245, 178, 168);
+}
+
+@media screen and (min-width: 769px) {
+    #parent {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+   
+    p {
+        margin: 0;
+        font-size: 20px;
+    }
+    .contents>h2 {
+        font-size: 25px;
+        border-bottom: solid;
+        border-bottom-color: rgb(236, 122, 122);
+        border-bottom-style: dotted;
+    }
+}
+@media screen and (max-width: 768px) {
+    #parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 25px;
+    }
+    .contents>h2 {
+        font-size: 30px;
+        border-bottom: solid;
+        border-bottom-color: rgb(236, 122, 122);
+        border-bottom-style: dotted;
+    }
+}
+.contents>h2::before {
+    content: "\025cf";
+    color: rgb(239, 111, 139);
+}
